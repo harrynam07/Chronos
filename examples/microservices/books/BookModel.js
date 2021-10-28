@@ -1,14 +1,18 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
+
 const { Schema } = mongoose;
 
 // UNCOMMENT THE LINE BELOW AND REPLACE WITH AN ACTUAL MONGODB URI FOR YOUR "CUSTOMERS" DATABASE
 require('./chronos-config'); // Bring in config file
-const myURI = process.env.BOOK_URI;
+// const myURI = process.env.BOOK_URI;
+const myURI =
+  'mongodb+srv://harrynam:harrynam7@cluster0.e2sc4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 
-mongoose.connect(myURI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose
+  .connect(myURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected!!!********* Books Database is live!!!'))
-  .catch((err) => console.log('Connection Error ', err));
+  .catch(err => console.log('Connection Error ', err));
 
 const BooksSchema = new Schema({
   title: {

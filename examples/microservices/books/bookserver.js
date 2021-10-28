@@ -1,4 +1,3 @@
-
 const chronos = require('chronos-tracker');
 require('./chronos-config'); // Bring in config file
 
@@ -8,6 +7,7 @@ const PORT = 4545;
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
+
 const app = express();
 const bodyParser = require('body-parser');
 const controller = require('./BookController.js');

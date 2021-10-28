@@ -9,6 +9,8 @@ chronos.use({
   database: {
     connection: 'REST',
     type: 'MongoDB',
-    URI: process.env.CHRONOS_URI,
+    // URI: process.env.CHRONOS_URI,
+    URI:
+      'mongodb+srv://harrynam:harrynam7@cluster0.e2sc4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
   },
 });
